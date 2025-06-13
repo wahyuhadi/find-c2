@@ -43,6 +43,10 @@ var IsDB = []Metadata{
 		Type: "Cobalt Strike JAVA 11",
 	},
 	Metadata{
+		Hash: "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+		Type: "Merlin C2 gRPC",
+	},
+	Metadata{
 		Hash: "29d21b20d29d29d21c41d21b21b41d494e0df9532e75299f15ba73156cee38",
 		Type: "Merlin C2 gRPC",
 	},
