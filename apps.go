@@ -54,6 +54,4 @@ func main() {
 		fmt.Println(fmt.Sprintf("[Done] Total Found RAT %v", total_found))
 
 	}
-
-	fmt.Println("stop")
 }
