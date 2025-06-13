@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
-	"github.com/projectdiscovery/gologger"
 )
 
 var index = models.IsDB
@@ -35,8 +33,8 @@ func main() {
 	// format JARM IP HASH
 	var total_found = 0
 	sc := bufio.NewScanner(os.Stdin)
-	gologger.Info().Msg("[INFO] It might take a while — please enjoy your coffee in the meantime")
-	gologger.Info().Msg("[>] Start Finding The RAT....")
+	fmt.Println("[INFO] It might take a while — please enjoy your coffee in the meantime")
+	fmt.Println("[>] Start Finding The RAT....")
 
 	for sc.Scan() {
 
@@ -46,14 +44,14 @@ func main() {
 		isfind, itype := findIndex(ishash)
 		if isfind {
 			total_found += 1
-			gologger.Info().Str("Fingerprint", ishash).Str("Found RAT", *itype).Msg(msg)
+			fmt.Println(fmt.Sprintf("%s Found RAT = %s with Fingerprint %s", msg, *itype, ishash))
 		}
 	}
 
 	if total_found == 0 {
-		gologger.Info().Msg("[Done] No RAT Found")
+		fmt.Println("[Done] No RAT Found")
 	} else {
-		gologger.Info().Msg(fmt.Sprintf("[Done] Total Found RAT %v", total_found))
+		fmt.Println(fmt.Sprintf("[Done] Total Found RAT %v", total_found))
 
 	}
 
