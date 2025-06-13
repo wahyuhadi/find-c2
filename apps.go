@@ -55,5 +55,5 @@ func main() {
 
 	}
 
-	fmt.Sprintln("stop")
+	fmt.Println("stop")
 }
