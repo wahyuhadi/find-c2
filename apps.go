@@ -35,12 +35,14 @@ func main() {
 	// format JARM IP HASH
 	var total_found = 0
 	sc := bufio.NewScanner(os.Stdin)
+	gologger.Info().Msg("[INFO] It might take a while — please enjoy your coffee in the meantime")
+	gologger.Info().Msg("[>] Start Finding The RAT....")
+
 	for sc.Scan() {
-		gologger.Info().Msg("Start Finding The RAT....")
 
 		ishash := ishash(sc.Text())
 		ishost := ishost(sc.Text())
-		msg := fmt.Sprintf("Host %s", ishost)
+		msg := fmt.Sprintf(" -- Host %s", ishost)
 		isfind, itype := findIndex(ishash)
 		if isfind {
 			total_found += 1
