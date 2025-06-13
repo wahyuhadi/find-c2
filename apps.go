@@ -44,7 +44,7 @@ func main() {
 		isfind, itype := findIndex(ishash)
 		if isfind {
 			total_found += 1
-			fmt.Println(fmt.Sprintf("%s Found RAT = %s with Fingerprint %s", msg, *itype, ishash))
+			fmt.Println(fmt.Sprintf("%s \n\t Identify RAT = %s \n\t with Fingerprint %s\n", msg, *itype, ishash))
 		}
 	}
 
