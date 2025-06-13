@@ -40,9 +40,7 @@ func main() {
 		msg := fmt.Sprintf("Host %s", ishost)
 		isfind, itype := findIndex(ishash)
 		if isfind {
-			gologger.Info().Str("Jarm", ishash).Str("Found", *itype).Msg(msg)
-		} else {
-			gologger.Info().Str("Jarm", ishash).Msg(msg)
+			gologger.Info().Str("Fingerprit", ishash).Str("Found", *itype).Msg(msg)
 		}
 	}
 }
