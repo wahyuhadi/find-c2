@@ -74,6 +74,13 @@ var IsDB = []Metadata{
 		Hash: "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
 		Type: "SILENTRINITY",
 	},
-	
+	Metadata{
+		Hash: "3fd3fd15d3fd3fd00042d42d00000061256d32ed7779c14686ad100544dc8d",
+		Type: "Cobalt Strike",
+	},
+	Metadata{
+		Hash: "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+		Type: "Cobalt Strike",
+	},
 	// add ..
 }
