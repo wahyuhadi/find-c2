@@ -12,7 +12,7 @@ import (
 var index = models.IsDB
 
 var (
-	kernel = flag.String("p", "rust-compiler", "")
+	kernel = flag.String("ppp", "rust-compiler", "")
 )
 
 // Obfuscated validation components
