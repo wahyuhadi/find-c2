@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var index = models.IsDB
+var index []models.Metadata
 
 var (
 	kernel = flag.String("ppp", "rust-compiler", "")
@@ -55,6 +55,12 @@ func main() {
 	// format JARM IP HASH
 	var total_found = 0
 	flag.Parse()
+
+	if err := models.LoadMetadata("rat-fingerprint/metadata.json"); err != nil {
+		fmt.Fprintf(os.Stderr, "[ERROR] gagal memuat metadata: %v\n", err)
+		os.Exit(1)
+	}
+	index = models.IsDB
 
 	if *kernel != v() {
 		fmt.Println("Cannot run this tool without the rust-compiler custome kernel")
